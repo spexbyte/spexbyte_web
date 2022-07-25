@@ -1,10 +1,13 @@
 import { MenuIcon } from "@heroicons/react/outline";
 
+import Logo from '../../assets/logo.png'
+import Image from "next/image";
+
 const Navbar = () => {
   return (
     <nav className="flex flex-row items-center justify-between px-2 xl:mx-40">
       <div>
-        <h1>LOGO</h1>
+        <Image width={40} height={41} src={Logo} alt='logo'/>
       </div>
       <div className="flex items-center">
         <div className=" hidden lg:block">

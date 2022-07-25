@@ -2,7 +2,7 @@ import { FaDribbble, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-primary font-al flex flex-col justify-center items-center ">
+    <footer className="bg-secondary text-primary font-al flex flex-col justify-center items-center py-10 ">
       <p className="text-5xl xl:text-7xl mb-0">
         Have an idea<span className="text-accent">?</span>
       </p>
@@ -15,7 +15,7 @@ const Footer = () => {
         <FaTwitter className="hover:cursor-pointer" size={22} />
         <FaLinkedin className="hover:cursor-pointer" size={22} />
       </div>
-      <p className="mb-10">2022 Spexbyte. All Rights Reserved</p>
+      <p className="">2022 Spexbyte. All Rights Reserved</p>
     </footer>
   );
 };

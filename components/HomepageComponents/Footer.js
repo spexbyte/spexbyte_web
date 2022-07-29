@@ -3,7 +3,7 @@ import { FaDribbble, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-secondary text-primary font-al flex flex-col justify-center items-center ">
-      <p className="text-5xl xl:text-7xl mb-0">
+      <p className="text-5xl xl:text-7xl mb-0 mt-10">
         Have an idea<span className="text-accent">?</span>
       </p>
       <p className="text-2xl  xl:text-3xl underline hover:cursor-pointer decoration-accent">

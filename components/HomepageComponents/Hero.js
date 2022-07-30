@@ -21,7 +21,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="flex flex-col mx-4  py-10 justify-center lg:mx-10 xl:justify-between xl:items-center xl:flex-row-reverse xl:px-10 xl:mx-40">
+    <section className="flex flex-col mx-4  py-10 justify-center lg:mx-10 xl:justify-between xl:items-center xl:flex-row-reverse xl:px-10 xl:mx-40 xl:h-screen">
       <div className="flex justify-center ">
         <div className="relative w-mw h-mh xl:w-dw xl:h-dh mb-2">
           <Image src={HeroImg} alt='hero_image' layout='fill' />
@@ -36,7 +36,7 @@ const Hero = () => {
           digital experiences so that you can focus on scaling your
           business.
         </p>
-        <p className="text-xl font-medium underline-offset-8 underline decoration-accent decoration-2 mt-6 xl:text-3xl">
+        <p className="text-xl font-medium hover:cursor-pointer underline-offset-8 underline decoration-accent decoration-2 mt-6 xl:text-3xl">
           Lets introduce ourselves
         </p>
       </div>

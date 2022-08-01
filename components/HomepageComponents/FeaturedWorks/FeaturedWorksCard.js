@@ -1,9 +1,25 @@
 import Image from "next/image";
+import { useRef, useEffect } from "react";
+import gsap from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 export default function FeaturedWorksCard({ work }) {
+
+  const container = useRef()
+  useEffect(()=> {
+    gsap.from(container.current,{y:200, duration:1, scrollTrigger:{
+      trigger:container.current,
+      top:'top 80%'
+    }})
+  })
+
+
   const { title, type, img } = work;
   return (
-    <div className="flex-col xl:w-cw hover:cursor-pointer">
+    <div ref={container} className="flex-col xl:w-cw hover:cursor-pointer">
       <div className="relative w-auto h-96 xl:h-ch ">
         <Image src={img} alt={title} layout='fill'/>
       </div>

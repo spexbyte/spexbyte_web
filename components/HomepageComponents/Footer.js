@@ -9,7 +9,7 @@ const Footer = () => {
       <p className="text-2xl  xl:text-3xl underline hover:cursor-pointer decoration-accent">
         Lets hear it
       </p>
-      <div className="flex flex-row space-x-7 my-10 xl:space-x-9">
+      <div className="text-gray-200 flex flex-row space-x-7 my-10 xl:space-x-9">
         <FaDribbble className="hover:cursor-pointer" size={22} />
         <FaInstagram className="hover:cursor-pointer" size={22} />
         <FaTwitter className="hover:cursor-pointer" size={22} />

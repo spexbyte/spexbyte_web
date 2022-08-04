@@ -19,7 +19,7 @@ export default function FeaturedWorksCard({ work }) {
 
   const { title, type, img } = work;
   return (
-    <div ref={container} className="flex-col xl:w-cw hover:cursor-pointer hover:scale-110 transiton duration-700">
+    <div ref={container} className="flex-col xl:w-cw hover:cursor-pointer">
       <div className="relative w-auto h-96 xl:h-ch ">
         <Image src={img} alt={title} layout='fill'/>
       </div>

@@ -23,10 +23,7 @@ export default function FeaturedWorks() {
       .from(title.current, { autoAlpha: 0, y: 50, duration: 0.8 })
       .from(desc.current, { autoAlpha: 0, y: 50, duration: 0.8 }, "-=0.2")
       .from(par.current, { autoAlpha: 0, x: -50, duration: 0.7 });
-
   }, []);
-
-  console.log(data);
   return (
     <section className="bg-secondary py-10 flex flex-col xl:justify-center xl:items-center">
       <div className="mx-4 xl:w-sw ">

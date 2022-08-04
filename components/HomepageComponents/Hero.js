@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import lottie from "lottie-web";
-import HeroImg from "../../assets/hero.png";
 import { gsap } from "gsap/dist/gsap";
+import HeroImg from "../../assets/hero.png";
 
 const Hero = () => {
   const container = useRef(null);
@@ -22,7 +22,7 @@ const Hero = () => {
       .from(title.current, { autoAlpha: 0, y: 200, duration: 0.8 }, "-=0.2")
       .from(body.current, { autoAlpha: 0, y: 200, duration: 0.8 }, "-=0.4")
       .from(but.current, { autoAlpha: 0, duration: 0.7 })
-      .from(underline.current, {autoAlpha:0, width:0, delay:0.1})
+      .from(underline.current, { autoAlpha: 0, width: 0, delay: 0.1 });
   }, []);
 
   /*Setting up Lottie Animation*/
@@ -75,7 +75,10 @@ const Hero = () => {
           >
             Lets introduce ourselves
           </p>
-          <div ref={underline} className=" invisible bg-accent w-auto h-1"></div>
+          <div
+            ref={underline}
+            className=" invisible bg-accent w-auto h-1"
+          ></div>
         </div>
       </div>
     </section>

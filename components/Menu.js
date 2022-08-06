@@ -54,22 +54,22 @@ function Menu({ showMenu, handleClick }) {
         </h1>
         <div className="text-4xl space-y-8 mt-4">
           <div className="overflow-hidden">
-            <p ref={about} className="invisible">
+            <p onClick={handleClick} ref={about} className="invisible">
               <Link href="/about">About</Link>
             </p>
           </div>
           <div className="overflow-hidden">
-            <p ref={works} className="invisible">
+            <p onClick={handleClick} ref={works} className="invisible">
               <Link href="/works">Works</Link>
             </p>
           </div>
           <div className="overflow-hidden">
-            <p ref={services} className="invisible">
+            <p onClick={handleClick}  ref={services} className="invisible">
               <Link href="/services">Services</Link>
             </p>
           </div>
           <div className="overflow-hidden">
-            <p ref={contact} className="invisible">
+            <p onClick={handleClick} ref={contact} className="invisible">
               <Link href="/contact">Contact</Link>
             </p>
           </div>

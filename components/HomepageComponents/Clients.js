@@ -25,42 +25,42 @@ export default function Clients() {
           </div>
         </div>
         <div className="grid grid-cols-2 place-items-center xl:place-items-start xl:grid-cols-3 xl:gap-x-64 xl:gap-y-24">
-          <div className="relative w-36 h-36 xl:w-60">
+          <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
             <Image
               alt="beyond_october_logo"
               src={beyond_october}
-              layout="responsive"
+              layout="fill"
             />
           </div>
-          <div className="relative w-36 h-36 pt-5 xl:w-60">
+          <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
             <Image
               alt="fragrance_hub_logo"
               src={fragrance_hub}
-              layout="responsive"
+              layout="fill"
             />
           </div>
-          <div className="relative w-36 h-36 xl:w-60">
+          <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
             <Image
               alt="floras_hair_market_logo"
               src={floras_hair}
-              layout="responsive"
+              layout="fill"
             />
           </div>
-          <div className="relative w-16 mb-14 xl:w-24 xl:ml-20">
-            <Image alt="svetro_logo" src={svetro} layout="responsive" />
+          <div className="relative w-lwm h-lhm  xl:w-lwd xl:h-lhd">
+            <Image alt="svetro_logo" src={svetro} layout="fill" />
           </div>
-          <div className="relative w-36 h-36 xl:w-60">
+          <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
             <Image
               alt="kaasuns_beauty_salon_logo"
               src={kaasuns_salon}
-              layout="responsive"
+              layout="fill"
             />
           </div>
-          <div className="relative w-36 h-36 pt-5 xl:w-60">
+          <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
             <Image
               alt="the_ladies_point_logo"
               src={ladies_point}
-              layout="responsive"
+              layout="fill"
             />
           </div>
         </div>

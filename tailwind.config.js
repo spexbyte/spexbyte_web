@@ -17,11 +17,15 @@ module.exports = {
         mtw: "451px",
         sw: "1280px",
         cw: "473px",
+        lwm: "130px",
+        lwd: "228px",
       },
       height: {
         mh: "310px",
         dh: "591px",
         ch: "586px",
+        lhm: "92px",
+        lhd: "162px",
       },
     },
     fontFamily: {

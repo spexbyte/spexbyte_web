@@ -3,6 +3,9 @@ import { useEffect, useRef,useState } from "react";
 import gsap from "gsap/dist/gsap";
 import Menu from "./Menu";
 
+import Logo from '../../assets/logo.png'
+import Image from "next/image";
+
 const Navbar = () => {
   const logoRef = useRef();
   const link1 = useRef();

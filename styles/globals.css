@@ -21,4 +21,20 @@ p {
   font-family: "Lato", sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
+input {
+  display: block;
+  border: 1px solid black;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  border: 1px solid black;
+}

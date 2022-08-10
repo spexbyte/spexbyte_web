@@ -10,13 +10,13 @@ import {
 
 const Clients = () => {
   return (
-    <div className="bg-secondary">
-      <div className="mx-4 xl:w-sw ">
-        <h2 className="text-accent">OUR CLIENTS</h2>
+    <div className="bg-secondary w-screen xl:flex xl:flex-col xl:items-center">
+      <div className="xl:w-sw mx-4 my-4">
+        <h2 className="text-accent text-xl xl:text-3xl">OUR CLIENTS</h2>
       </div>
 
       {/*CLIENTS CONTAINER*/}
-      <div className="mx-4 xl:w-sw  grid grid-cols-2 place-items-center xl:place-items-start xl:grid-cols-3 xl:gap-x-64 xl:gap-y-24 ">
+      <div className="mx-4 xl:w-sw  grid grid-cols-2 place-items-center xl:place-items-start xl:grid-cols-3 xl:gap-x-64 xl:gap-y-24 mb-4">
         <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
           <Image alt="beyond_october_logo" src={beyond_october} layout="fill" />
         </div>

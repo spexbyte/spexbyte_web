@@ -19,6 +19,7 @@ module.exports = {
         cw: "473px",
         lwm: "130px",
         lwd: "228px",
+        iw:'374px',
       },
       height: {
         mh: "310px",
@@ -26,6 +27,8 @@ module.exports = {
         ch: "586px",
         lhm: "92px",
         lhd: "162px",
+        ih:'209px',
+        idh:'715px'
       },
     },
     fontFamily: {
@@ -33,5 +36,7 @@ module.exports = {
       la: ["Lato", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 };

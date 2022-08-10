@@ -15,7 +15,7 @@ const Footer = () => {
         <FaTwitter className="hover:cursor-pointer" size={22} />
         <FaLinkedin className="hover:cursor-pointer" size={22} />
       </div>
-      <p className="mb-10">2022 Spexbyte. All Rights Reserved</p>
+      <p className="">2022 Spexbyte. All Rights Reserved</p>
     </footer>
   );
 };

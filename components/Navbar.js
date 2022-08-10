@@ -1,10 +1,8 @@
-import { MenuIcon } from "@heroicons/react/outline";
-import { useEffect, useRef,useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 import Menu from "./Menu";
-
-import Logo from '../../assets/logo.png'
-import Image from "next/image";
+import { MenuIcon } from "@heroicons/react/outline";
 
 const Navbar = () => {
   const logoRef = useRef();
@@ -14,17 +12,14 @@ const Navbar = () => {
   const link4 = useRef();
   const navTL = useRef();
 
-
   /*Adding MenuState*/
-  const [menuClicked, setMenuClicked] = useState(false)
+  const [menuClicked, setMenuClicked] = useState(false);
 
-  function handleMenuClick(){
+  function handleMenuClick() {
     // setMenuClicked(!menuClicked)
-    setMenuClicked(!menuClicked)
-    console.log('Menu clicked')
+    setMenuClicked((prevClick) => !prevClick);
+    console.log("Menu clicked");
   }
-
-
 
   useEffect(() => {
     navTL.current = gsap
@@ -42,23 +37,23 @@ const Navbar = () => {
       <nav className="flex flex-row items-center justify-between px-2 xl:mx-40 pt-5">
         <div>
           <h1 ref={logoRef} className="invisible">
-            LOGO
+            <Link href="/">Logo</Link>
           </h1>
         </div>
         <div className="flex items-center">
           <div className=" hidden lg:block">
             <ul className="flex space-x-9 font-pr font-light list-none text-lg xl:space-x-12 ">
               <li ref={link1} className="invisible hover:cursor-pointer">
-                About
+                <Link href="/about">About</Link>
               </li>
               <li ref={link2} className="invisible hover:cursor-pointer">
-                Works
+                <Link href="/works">Works</Link>
               </li>
               <li ref={link3} className="invisible hover:cursor-pointer">
-                Services
+                <Link href="/services">Services</Link>
               </li>
               <li ref={link4} className="invisible hover:cursor-pointer">
-                Contact
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>

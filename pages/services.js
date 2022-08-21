@@ -1,5 +1,11 @@
+import ServiceComponents from "../components/ServicesPageComponents";
+
 const Services = () => {
-  return <h2>Services Page</h2>;
+  return (
+    <div className=" my-14">
+      <ServiceComponents />
+    </div>
+  );
 };
 
 export default Services;

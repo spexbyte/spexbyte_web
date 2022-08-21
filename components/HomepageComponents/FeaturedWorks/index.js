@@ -30,7 +30,7 @@ export default function FeaturedWorks() {
         <h3 ref={title} className="text-accent text-xl xl:text-3xl invisible">
           FEATURED WORKS
         </h3>
-        <h2 ref={desc} className="text-3xl text-primary xl:text-5xl">
+        <h2 ref={desc} className="text-3xl text-primary xl:text-5xl invisible">
           From the archives
         </h2>
         <p

@@ -8,6 +8,9 @@ const AboutHero = () => {
           <Image src="/assets/team.jpg" layout="fill" alt="team photo" />
         </div>
       </div>
+      <h3 className="text-accent text-xl xl:text-2xl">
+        ABOUT US
+      </h3>
       <h1 className="font-medium text-5xl xl:text-7xl">
         We are spexbyte<span className="text-accent">.</span>
       </h1>

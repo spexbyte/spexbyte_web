@@ -1,5 +1,13 @@
+import WorkPageComponents from "../../components/WorksPageComponents";
+
 const Works = () => {
-  return <h2>Works page</h2>;
+  return (
+    <section className="flex justify-center">
+      <div className="mt-32 mb-20">
+        <WorkPageComponents />
+      </div>
+    </section>
+  );
 };
 
 export default Works;

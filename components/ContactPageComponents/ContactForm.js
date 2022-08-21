@@ -70,66 +70,93 @@ const ContactForm = () => {
   };
   return (
     <form onSubmit={onSubmitEnquiry}>
-      <div>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          value={name}
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          value={email}
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <div>
-        <div>
+      {/* Formwrapper */}
+      <div className="space-y-8">
+        <div className="flex-col">
+          <label className="block font-semibold text-xl xl:text-2xl" htmlFor="name">
+            Name
+          </label>
           <input
-            type="checkbox"
-            name="branding"
-            value={branding}
-            onChange={onBrandChange}
+            type="text"
+            value={name}
+            name="name"
+            onChange={(e) => setName(e.target.value)}
+            className="border-b-2 text-lg border-black w-3/4 xl:w-1/4"
           />
-          <label htmlFor="branding">Branding</label>
         </div>
-        <div>
+        <div className="flex-col">
+          <label className="block font-semibold text-xl xl:text-2xl" htmlFor="email">
+            Email
+          </label>
           <input
-            type="checkbox"
-            name="ui/ux"
-            value={design}
-            onChange={onDesignChange}
+            type="text"
+            value={email}
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            className="border-b-2 text-lg border-black w-3/4 xl:w-1/4"
           />
-          <label htmlFor="design">UI/UX Design</label>
         </div>
-        <div>
-          <input
-            type="checkbox"
-            name="webdev"
-            value={webdev}
-            onChange={onWebDevChange}
-          />
-          <label htmlFor="branding">Web Development</label>
+        <div className="flex-col space-y-2">
+          <div className="flex space-x-2">
+            <input
+              type="checkbox"
+              name="branding"
+              value={branding}
+              onChange={onBrandChange}
+              className="w-5"
+            />
+            <label className=" text-xl xl:text-2xl" htmlFor="branding">
+              Branding
+            </label>
+          </div>
+          <div className=" flex space-x-2">
+            <input
+              type="checkbox"
+              name="ui/ux"
+              value={design}
+              onChange={onDesignChange}
+              className="w-5"
+            />
+            <label className=" text-xl xl:text-2xl" htmlFor="design">
+              UI/UX Design
+            </label>
+          </div>
+          <div className="flex space-x-2">
+            <input
+              type="checkbox"
+              name="webdev"
+              value={webdev}
+              onChange={onWebDevChange}
+              className="w-5"
+            />
+            <label className=" text-xl xl:text-2xl" htmlFor="branding">
+              Web Development
+            </label>
+          </div>
+        </div>
+        <div className="flex-col">
+          <label className="block font-semibold text-xl xl:text-2xl" htmlFor="message">
+            Tell us about your project
+          </label>
+          <textarea
+            name="message"
+            id=""
+            cols="30"
+            rows="3"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="border-b-2 text-lg border-black w-3/4 xl:w-2/4"
+          ></textarea>
+        </div>
+        <div className="w-full flex justify-center xl:justify-start">
+          <button
+            className="border border-black py-4 px-20 text-lg xl:text-2xl"
+            type="submit"
+          >
+            SUBMIT
+          </button>
         </div>
       </div>
-      <div>
-        <label htmlFor="message">Tell us about your project</label>
-        <textarea
-          name="message"
-          id=""
-          cols="30"
-          rows="10"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
-      </div>
-
-      <button type="submit">Submit Enquiry</button>
     </form>
   );
 };

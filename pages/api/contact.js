@@ -1,4 +1,4 @@
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer');
 
 const mailer = async (email, subject, text) => {
   try {
@@ -15,12 +15,12 @@ const mailer = async (email, subject, text) => {
 
     await transport.sendMail({
       from: email,
-      to: ["evanskwofie67@gmail.com", "jamilalhassan@gmail.com"],
+      to: ['evanskwofie67@gmail.com', 'alhassanjamil0@gmail.com'],
       subject: subject,
       text: text,
     });
 
-    console.log("Email delivered succesfully");
+    console.log('Email delivered succesfully');
   } catch (error) {
     console.log(error.message);
   }
@@ -28,15 +28,15 @@ const mailer = async (email, subject, text) => {
 
 // handle sending get in touch message
 export default async function contact(request, response) {
-  if (request.method === "POST") {
+  if (request.method === 'POST') {
     const { name, email, message } = request.body;
     if (!name || !email || !message) {
       response
         .status(400)
-        .json({ error: "Please make sure form fields are filled" });
+        .json({ error: 'Please make sure form fields are filled' });
     }
     try {
-      mailer(email, "Enquiry From Client", message);
+      mailer(email, 'Enquiry From Client', message);
       response.status(200).json({
         message: "Thanks for reaching out, we'll get back to you shortly",
       });
@@ -45,7 +45,7 @@ export default async function contact(request, response) {
       response.status(400).json({ message: error.message });
     }
   } else {
-    response.setHeader("Allow", ["POST"]);
+    response.setHeader('Allow', ['POST']);
     return response
       .status(405)
       .json({ error: `Method ${request.method} not allowed` });

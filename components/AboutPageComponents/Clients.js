@@ -18,10 +18,22 @@ const Clients = () => {
       {/*CLIENTS CONTAINER*/}
       <div className="mx-4 xl:w-sw  grid grid-cols-2 place-items-center xl:place-items-start xl:grid-cols-3 xl:gap-x-64 xl:gap-y-24 mb-4">
         <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
-          <Image alt="beyond_october_logo" src={beyond_october} layout="fill" />
+          <Image
+            alt="beyond_october_logo"
+            src={beyond_october}
+            layout="fill"
+            placeholder="blur"
+            blurDataURL={beyond_october}
+          />
         </div>
         <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
-          <Image alt="fragrance_hub_logo" src={fragrance_hub} layout="fill" />
+          <Image
+            alt="fragrance_hub_logo"
+            src={fragrance_hub}
+            layout="fill"
+            placeholder="blur"
+            blurDataURL={fragrance_hub}
+          />
         </div>
         <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
           <Image
@@ -31,17 +43,31 @@ const Clients = () => {
           />
         </div>
         <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
-          <Image alt="svetro_logo" src={svetro} layout="fill" />
+          <Image
+            alt="svetro_logo"
+            src={svetro}
+            layout="fill"
+            placeholder="blur"
+            blurDataURL={svetro}
+          />
         </div>
         <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
           <Image
             alt="kaasuns_beauty_salon_logo"
             src={kaasuns_salon}
             layout="fill"
+            placeholder="blur"
+            blurDataURL={kaasuns_salon}
           />
         </div>
         <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
-          <Image alt="the_ladies_point_logo" src={ladies_point} layout="fill" />
+          <Image
+            alt="the_ladies_point_logo"
+            src={ladies_point}
+            layout="fill"
+            placeholder="blur"
+            blurDataURL={ladies_point}
+          />
         </div>
       </div>
     </div>

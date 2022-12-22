@@ -30,7 +30,7 @@ export default function ServiceComponents() {
               Leave the hard work to us and focus on what matters most to you.
             </p>
           </div>
-          <p className="text-lg font-light xl:w-3/4 xl:text-xl">
+          <div className="text-lg font-light xl:w-3/4 xl:text-xl">
             <h2 className="text-xl font-medium mb-2 text-gray-500 xl:text-2xl">
               Keeping you and your clients happy{" "}
               <span>through strategic problem solving</span>
@@ -61,7 +61,7 @@ export default function ServiceComponents() {
             beautiful User Interfaces coupled with the very best of User
             Experience practices are at the core of every project. You are
             guaranteed functIonality without sacrificing aesthetics. */}
-          </p>
+          </div>
         </div>
         <hr className="my-20" />
         <div className="my-10">

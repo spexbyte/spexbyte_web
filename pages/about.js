@@ -1,9 +1,11 @@
 import AboutComponent from "../components/AboutPageComponents/index";
+import Container from "../components/container";
 
 const About = () => {
   return (
-    <section className="">
-    <AboutComponent/>
+    <section>
+      <Container title="About - Spexbyte Digital - Freelance Digital Agency" />
+      <AboutComponent />
     </section>
   );
 };

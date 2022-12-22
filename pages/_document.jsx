@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 const descriptionContent =
   "Spexbyte Digital is a freelance web development, web design and digital experience agency in Ghana. We build your websites, provide UI/UX design services and create digital interfaces that will boost your customers and increase sales ";
 const titleContent = "Spexbyte Digital - Freelance Web Agency in Ghana";
-const urlContent = "spexbyte.digital.vercal.app";
+const urlContent = "spexbyte-web.vercel.app";
 const author = "Spexbyte Digital";
 const twitterHandle = "@spexbyte";
 

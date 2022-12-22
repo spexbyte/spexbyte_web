@@ -30,6 +30,8 @@ export default function Clients() {
               alt="beyond_october_logo"
               src={beyond_october}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={beyond_october}
             />
           </div>
           <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
@@ -37,6 +39,8 @@ export default function Clients() {
               alt="fragrance_hub_logo"
               src={fragrance_hub}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={beyond_october}
             />
           </div>
           <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
@@ -44,6 +48,8 @@ export default function Clients() {
               alt="floras_hair_market_logo"
               src={floras_hair}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={floras_hair}
             />
           </div>
           <div className="relative w-lwm h-lhm  xl:w-lwd xl:h-lhd">
@@ -54,6 +60,8 @@ export default function Clients() {
               alt="kaasuns_beauty_salon_logo"
               src={kaasuns_salon}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={kaasuns_salon}
             />
           </div>
           <div className="relative w-lwm h-lhm xl:w-lwd xl:h-lhd">
@@ -61,6 +69,8 @@ export default function Clients() {
               alt="the_ladies_point_logo"
               src={ladies_point}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={ladies_point}
             />
           </div>
         </div>

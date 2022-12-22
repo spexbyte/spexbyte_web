@@ -47,7 +47,13 @@ const Hero = () => {
           ref={image}
           className="relative w-mw h-mh xl:w-dw xl:h-dh mb-2 invisible"
         >
-          <Image src={HeroImg} alt="hero_image" layout="fill" />
+          <Image
+            src={HeroImg}
+            alt="hero_image"
+            layout="fill"
+            placeholder="blur"
+            blurDataURL={HeroImg}
+          />
         </div>
       </div>
       <div className="">

@@ -9,3 +9,4 @@
 5. Add company logo
 6. Add learn more pages to services page
 7. Handle core values a bit better
+8. Change favicon to something suitable

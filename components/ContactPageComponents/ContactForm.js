@@ -183,16 +183,15 @@ const ContactForm = () => {
         </div>
         <div className="w-full flex flex-col justify-center xl:justify-start">
           <button
-            className="border border-black py-4 px-20 text-lg xl:text-2xl"
+            className="border border-black py-4 px-20 text-lg xl:text-2xl max-w-md ml-auto"
             type="submit"
             role="submit"
           >
             {isLoading ? "SUBMITTING" : "SUBMIT"}
           </button>
           {isSuccess && (
-            <p className="text-2xl font-bold">
-              Thanks for reaching out. Check your email for response on the next
-              steps
+            <p className="text-2xl mt-2 font-bold">
+              Thanks for reaching out. You will here from us soon
             </p>
           )}
         </div>

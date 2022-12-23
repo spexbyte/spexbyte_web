@@ -181,20 +181,19 @@ const ContactForm = () => {
             className="border-b-2 text-lg border-black w-3/4 xl:w-2/4"
           ></textarea>
         </div>
-        <div className="w-full flex justify-center xl:justify-start">
-          {isSuccess ? (
+        <div className="w-full flex flex-col justify-center xl:justify-start">
+          <button
+            className="border border-black py-4 px-20 text-lg xl:text-2xl"
+            type="submit"
+            role="submit"
+          >
+            {isLoading ? "SUBMITTING" : "SUBMIT"}
+          </button>
+          {isSuccess && (
             <p className="text-2xl font-bold">
               Thanks for reaching out. Check your email for response on the next
               steps
             </p>
-          ) : (
-            <button
-              className="border border-black py-4 px-20 text-lg xl:text-2xl"
-              type="submit"
-              role="submit"
-            >
-              {isLoading ? "SUBMITTING" : "SUBMIT"}
-            </button>
           )}
         </div>
       </div>

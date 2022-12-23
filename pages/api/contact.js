@@ -1,5 +1,4 @@
 import Cors from "cors";
-import runMiddleware from "../../utils/runMiddleware";
 
 import sendMailToUser from "../../utils/sendMailToClient";
 import mailer from "../../utils/sendMailToTeam";
@@ -20,9 +19,6 @@ const usersEmail = [
 
 // handle sending get in touch message
 export default async function contact(request, response) {
-  // run middleware here
-  await runMiddleware(request, response, cors);
-
   if (request.method === "POST") {
     const { name, email, message, branding, webdev, design } = request.body;
 

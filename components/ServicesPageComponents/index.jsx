@@ -1,16 +1,7 @@
+import dynamic from "next/dynamic";
 import data from "./data";
-import ServiceCard from "./ServiceCard";
 
-// const someStuff  ={
-//   stuffA: 'We are problem solvers. We approach every project with an open and
-//   curious mind. We ask the right questions to find the root of your
-//   business problem, and provide solutions specifically tailored for
-//   the growth of your business.<span className="my-4 block"></span> We know your clients are important to you, so our solutions are
-//   strategically implemented to bring in new clients while keeping the
-//   old clients happy, and you happy as well. Because guess what? You
-//   are our client as well! And we care about you just as much as you
-//   care about them.'
-// }
+const ServiceCard = dynamic(() => import("./ServiceCard"));
 
 export default function ServiceComponents() {
   return (
@@ -24,9 +15,6 @@ export default function ServiceComponents() {
           <div className="flex ">
             <div className="bg-accent h-auto w-2 mr-2"></div>
             <p className="font-light text-lg xl:text-2xl xl:w-2/4">
-              {/* I like this line but I am not sure if we can keep it */}
-              {/* This may not be Hogwarts, but we do add a touch of magic to your
-              business. */}
               Leave the hard work to us and focus on what matters most to you.
             </p>
           </div>
@@ -52,15 +40,8 @@ export default function ServiceComponents() {
             appealing, but also function smoothly and effectively. That&apos;s
             why we prioritize both aesthetics and performance in everything we
             create. With your product as our priority, we work to ensure that
-            you get the best of both worlds.
-            {/* This part is a suggested revision. could we have another button here just after it? */}
-            Contact us to learn more about how we can help bring your digital
-            vision to life.
-            {/* So no wants a boring app, or site or unmemorable logos. We are a
-            design-first agency; what does that mean? Well, simply put,
-            beautiful User Interfaces coupled with the very best of User
-            Experience practices are at the core of every project. You are
-            guaranteed functIonality without sacrificing aesthetics. */}
+            you get the best of both worlds. Contact us to learn more about how
+            we can help bring your digital vision to life.
           </div>
         </div>
         <hr className="my-20" />

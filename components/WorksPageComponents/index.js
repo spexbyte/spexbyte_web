@@ -12,9 +12,6 @@ export default function WorkPageComponents() {
           <div className="flex">
             <div className="w-2 mr-2 h-auto bg-accent"></div>
             <p className="font-light text-lg xl:text-2xl xl:w-2/4">
-              {/* We are not ones to show off, but since you are here, we have */}
-              {/* selected some of our proudest works for your perusal. */}
-              {/* A showcase of our best and most relevant projects. */}
               Here is a selection of some of our most successful and impactful
               projects. We hope they give you an idea of the kind of quality and
               expertise you can expect from our team

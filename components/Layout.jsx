@@ -1,5 +1,6 @@
+import dynamic from "next/dynamic";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+const Footer = dynamic(() => import("./Footer"));
 
 const Layout = ({ children }) => {
   return (

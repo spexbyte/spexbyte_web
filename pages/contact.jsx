@@ -1,6 +1,9 @@
-import ContactForm from "../components/ContactPageComponents/ContactForm";
+import dynamic from "next/dynamic";
+
+const ContactForm = dynamic(() =>
+  import("../components/ContactPageComponents/ContactForm")
+);
 import Container from "../components/container";
-import ContactComponents from "../components/ContactPageComponents/index";
 
 const Contact = () => {
   return (
@@ -12,8 +15,6 @@ const Contact = () => {
             <h3 className="text-accent text-xl xl:text-3xl">CONTACT US</h3>
             <h2 className="text-3xl xl:text-5xl">Get In Touch</h2>
             <p className="font-light text-lg xl:text-2xl xl:w-2/4">
-              {/* Akwaaba! We are so glad you are here! Please tell us about your
-            project by filling the contact form below. */}
               Akwaaba! We are excited to learn more about your project and how
               we can help. Please take a moment to fill out the form below and
               tell us about your project. We will be in touch shortly to discuss

@@ -1,5 +1,9 @@
+import dynamic from "next/dynamic";
 import Container from "../components/container";
-import ServiceComponents from "../components/ServicesPageComponents";
+
+const ServiceComponents = dynamic(() =>
+  import("../components/ServicesPageComponents")
+);
 
 const Services = () => {
   return (

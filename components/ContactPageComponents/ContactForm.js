@@ -1,34 +1,36 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const ContactForm = () => {
+  const [isLoading, setLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   // declare form input states
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [branding, setBranding] = useState('');
-  const [design, setDesign] = useState('');
-  const [webdev, setWebDev] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [branding, setBranding] = useState("");
+  const [design, setDesign] = useState("");
+  const [webdev, setWebDev] = useState("");
 
   // declare onChange handler functions for each input
   function onBrandChange(e) {
     if (e.target.checked) {
-      setBranding('branding');
+      setBranding("branding");
     } else {
-      setBranding('');
+      setBranding("");
     }
   }
   function onDesignChange(e) {
     if (e.target.checked) {
-      setDesign('design');
+      setDesign("design");
     } else {
-      setDesign('');
+      setDesign("");
     }
   }
   function onWebDevChange(e) {
     if (e.target.checked) {
-      setDesign('web development');
+      setWebDev("web development");
     } else {
-      setWebDev('');
+      setWebDev("");
     }
   }
 
@@ -36,17 +38,17 @@ const ContactForm = () => {
   const onSubmitEnquiry = async (e) => {
     e.preventDefault();
     if (!name || !email || !message) {
-      alert('Please you cannot make an empty enquiry');
+      alert("Please you cannot make an empty enquiry");
       return;
     }
-
     try {
+      setLoading(true);
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}api/contact`,
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             name,
@@ -62,115 +64,138 @@ const ContactForm = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert(data.message);
+        // alert(data.message);
+        setLoading(false);
+        setIsSuccess(true);
+      }
+      if (!res.ok) {
+        setLoading(false);
+        setIsSuccess(false);
+        throw new Error("Submission failed. Contact us another way?");
       }
 
-      setEmail('');
-      setName('');
-      setMessage('');
-      setBranding('');
-      setDesign('');
-      setWebDev('');
+      setEmail("");
+      setName("");
+      setMessage("");
+      setBranding("");
+      setDesign("");
+      setWebDev("");
     } catch (error) {
+      setLoading(false);
+      setIsSuccess(false);
       alert(error.message);
     }
   };
   return (
     <form onSubmit={onSubmitEnquiry}>
       {/* Formwrapper */}
-      <div className='space-y-8'>
-        <div className='flex-col'>
+      <div className="space-y-8">
+        <div className="flex-col">
           <label
-            className='block font-semibold text-xl xl:text-2xl'
-            htmlFor='name'
+            className="block font-semibold text-xl xl:text-2xl"
+            htmlFor="name"
           >
             Name
           </label>
           <input
-            type='text'
+            type="text"
+            placeholder="Your full name"
             value={name}
-            name='name'
+            name="name"
             onChange={(e) => setName(e.target.value)}
-            className='border-b-2 text-lg border-black w-3/4 xl:w-1/4'
+            className="border-b-2 text-lg border-black w-3/4 xl:w-1/4"
           />
         </div>
-        <div className='flex-col'>
+        <div className="flex-col">
           <label
-            className='block font-semibold text-xl xl:text-2xl'
-            htmlFor='email'
+            className="block font-semibold text-xl xl:text-2xl"
+            htmlFor="email"
           >
             Email
           </label>
           <input
-            type='text'
+            type="text"
+            placeholder="Your email address"
             value={email}
-            name='email'
+            name="email"
             onChange={(e) => setEmail(e.target.value)}
-            className='border-b-2 text-lg border-black w-3/4 xl:w-1/4'
+            className="border-b-2 text-lg border-black w-3/4 xl:w-1/4"
           />
         </div>
-        <div className='flex-col space-y-2'>
-          <div className='flex space-x-2'>
+        <div className="flex-col space-y-2">
+          <div className="flex space-x-2">
             <input
-              type='checkbox'
-              name='branding'
+              type="checkbox"
+              name="branding"
+              id="branding"
               value={branding}
               onChange={onBrandChange}
-              className='w-5'
+              className="w-5"
             />
-            <label className=' text-xl xl:text-2xl' htmlFor='branding'>
+            <label className=" text-xl xl:text-2xl" htmlFor="branding">
               Branding
             </label>
           </div>
-          <div className=' flex space-x-2'>
+          <div className=" flex space-x-2">
             <input
-              type='checkbox'
-              name='ui/ux'
+              type="checkbox"
+              name="ui/ux"
               value={design}
               onChange={onDesignChange}
-              className='w-5'
+              className="w-5"
+              id="ui/ux"
             />
-            <label className=' text-xl xl:text-2xl' htmlFor='design'>
+            <label className=" text-xl xl:text-2xl" htmlFor="ui/ux">
               UI/UX Design
             </label>
           </div>
-          <div className='flex space-x-2'>
+          <div className="flex space-x-2">
             <input
-              type='checkbox'
-              name='webdev'
+              type="checkbox"
+              name="webdev"
+              id="webdev"
               value={webdev}
               onChange={onWebDevChange}
-              className='w-5'
+              className="w-5"
             />
-            <label className=' text-xl xl:text-2xl' htmlFor='branding'>
+            <label className=" text-xl xl:text-2xl" htmlFor="webdev">
               Web Development
             </label>
           </div>
         </div>
-        <div className='flex-col'>
+        <div className="flex-col">
           <label
-            className='block font-semibold text-xl xl:text-2xl'
-            htmlFor='message'
+            className="block font-semibold text-xl xl:text-2xl"
+            htmlFor="message"
           >
             Tell us about your project
           </label>
           <textarea
-            name='message'
-            id=''
-            cols='30'
-            rows='3'
+            placeholder="how may we help your?"
+            name="message"
+            id=""
+            cols="30"
+            rows="3"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className='border-b-2 text-lg border-black w-3/4 xl:w-2/4'
+            className="border-b-2 text-lg border-black w-3/4 xl:w-2/4"
           ></textarea>
         </div>
-        <div className='w-full flex justify-center xl:justify-start'>
-          <button
-            className='border border-black py-4 px-20 text-lg xl:text-2xl'
-            type='submit'
-          >
-            SUBMIT
-          </button>
+        <div className="w-full flex justify-center xl:justify-start">
+          {isSuccess ? (
+            <p className="text-2xl font-bold">
+              Thanks for reaching out. Check your email for response on the next
+              steps
+            </p>
+          ) : (
+            <button
+              className="border border-black py-4 px-20 text-lg xl:text-2xl"
+              type="submit"
+              role="submit"
+            >
+              {isLoading ? "SUBMITTING" : "SUBMIT"}
+            </button>
+          )}
         </div>
       </div>
     </form>

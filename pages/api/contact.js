@@ -1,5 +1,14 @@
+import Cors from "cors";
+import runMiddleware from "../../utils/runMiddleware";
+
 import sendMailToUser from "../../utils/sendMailToClient";
 import mailer from "../../utils/sendMailToTeam";
+
+// Initializing the cors middleware
+// You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+const cors = Cors({
+  methods: ["POST", "GET", "HEAD"],
+});
 
 const fs = require("fs");
 const path = require("path");
@@ -11,6 +20,9 @@ const usersEmail = [
 
 // handle sending get in touch message
 export default async function contact(request, response) {
+  // run middleware here
+  await runMiddleware(request, response, cors);
+
   if (request.method === "POST") {
     const { name, email, message, branding, webdev, design } = request.body;
 

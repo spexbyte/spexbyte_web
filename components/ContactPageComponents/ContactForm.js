@@ -100,7 +100,7 @@ const ContactForm = () => {
             value={name}
             name="name"
             onChange={(e) => setName(e.target.value)}
-            className="border-b-2 text-lg border-black w-3/4 xl:w-1/4"
+            className="border-b-2 px-2 text-lg border-black w-3/4 xl:w-1/4"
           />
         </div>
         <div className="flex-col">
@@ -116,7 +116,7 @@ const ContactForm = () => {
             value={email}
             name="email"
             onChange={(e) => setEmail(e.target.value)}
-            className="border-b-2 text-lg border-black w-3/4 xl:w-1/4"
+            className="border-b-2 px-2 text-lg border-black w-3/4 xl:w-1/4"
           />
         </div>
         <div className="flex-col space-y-2">
@@ -168,17 +168,17 @@ const ContactForm = () => {
             Tell us about your project
           </label>
           <textarea
-            placeholder="how may we help your?"
+            placeholder="I need a custom built ecommerce store with multiple payment gateways"
             name="message"
             id=""
             cols="30"
             rows="3"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="border-b-2 text-lg border-black w-3/4 xl:w-2/4"
+            className="border-b-2 px-2 text-lg border-black w-3/4 xl:w-2/4"
           ></textarea>
         </div>
-        <div className="w-full flex flex-col justify-center xl:justify-start">
+        <div className="w-full">
           <button
             className="border border-black py-4 px-20 text-lg xl:text-2xl max-w-md ml-auto"
             type="submit"

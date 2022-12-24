@@ -9,9 +9,9 @@ const Contact = () => {
   return (
     <>
       <Container title="Contact - Spexbyte Digital - Freelance Digital Agency" />
-      <section className="m-4 xl:flex xl:justify-center xl:items-center xl:h-screen ">
-        <div className="xl:w-sw ">
-          <div className="">
+      <section className="m-4 xl:mt-20 flex justify-center ">
+        <div className="xl:w-sw">
+          <div>
             <h3 className="text-accent text-xl xl:text-3xl">CONTACT US</h3>
             <h2 className="text-3xl xl:text-5xl">Get In Touch</h2>
             <p className="font-light text-lg xl:text-2xl xl:w-2/4">

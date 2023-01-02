@@ -15,7 +15,7 @@ const AboutComponent = () => {
   SwiperCore.use([Autoplay]);
   return (
     <section className="mt-10 flex flex-col items-center">
-      <div className="mx-4 xl:w-sw ">
+      <div className="xl:w-sw ">
         <AboutHero />
       </div>
       {/* values */}
@@ -34,7 +34,7 @@ const AboutComponent = () => {
               />
             ))}
         </div>
-        <div>
+        <div className="hidden xl:block">
           <Swiper
             spaceBetween={30}
             centeredSlides={true}

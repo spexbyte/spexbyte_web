@@ -25,7 +25,7 @@ export default function WorkPageComponents() {
               Case studies coming soon...
             </p>
           </div>
-          <div className="sm:grid md:grid-cols-2 space-y-10">
+          <div className="sm:grid md:grid-cols-2 space-y-10 overflow-hidden">
             {data &&
               data.map((work) => (
                 <FeaturedWorksCard key={work.id} work={work} />

@@ -64,7 +64,7 @@ function Menu({ showMenu, handleClick }) {
             </p>
           </div>
           <div className="overflow-hidden">
-            <p onClick={handleClick}  ref={services} className="invisible">
+            <p onClick={handleClick} ref={services} className="invisible">
               <Link href="/services">Services</Link>
             </p>
           </div>
@@ -80,8 +80,12 @@ function Menu({ showMenu, handleClick }) {
         className="flex text-gray-800 justify-center flex-row space-x-10 my-10 mb-20"
       >
         <FaDribbble size={26} />
-        <FaInstagram size={26} />
-        <FaTwitter size={26} />
+        <Link href="https://www.instagram.com/spexbyte/">
+          <FaInstagram size={26} />
+        </Link>
+        <Link href='https://twitter.com/spexbyte'>
+          <FaTwitter size={26} />
+        </Link>
         <FaLinkedin size={26} />
       </div>
     </section>

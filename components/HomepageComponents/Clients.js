@@ -10,7 +10,7 @@ import {
 export default function Clients() {
   return (
     <section className="bg-secondary text-primary flex justify-center">
-      <div className="mx-4 py-10 xl:w-sw ">
+      <div className="mx-4 py-10 xl:w-sw xl:py-52">
         <div>
           <h3 className="text-accent text-xl xl:text-3xl">OUR CLIENTS</h3>
           <h2 className="text-3xl xl:text-5xl xl:w-2/4">

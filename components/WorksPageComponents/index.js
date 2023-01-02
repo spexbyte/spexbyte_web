@@ -5,7 +5,7 @@ import FeaturedWorksCard from "./FeaturedWorksCard";
 export default function WorkPageComponents() {
   return (
     <section className=" justify-center">
-      <div className="">
+      <div className="xl:w-sw">
         {/* Text div */}
         <div className="mx-4">
           <h2 className="text-accent text-xl xl:text-3xl">OUR WORKS</h2>

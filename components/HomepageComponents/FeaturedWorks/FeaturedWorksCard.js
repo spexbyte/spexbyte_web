@@ -4,15 +4,17 @@ import gsap from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export default function FeaturedWorksCard({ work }) {
+export default function FeaturedWorksCard({ work, triggerContainer }) {
   const container = useRef();
   useEffect(() => {
     gsap.from(container.current, {
-      y: 200,
-      duration: 1,
+      x: 600,
+      opacity:0,
       scrollTrigger: {
         trigger: container.current,
-        top: "top 80%",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: "true",
       },
     });
   });
@@ -25,6 +27,7 @@ export default function FeaturedWorksCard({ work }) {
           src={img}
           alt={title}
           layout="fill"
+          objectFit="cover"
           placeholder="blur"
           blurDataURL={img}
         />

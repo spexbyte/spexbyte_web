@@ -3,6 +3,8 @@ import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 import Menu from "./Menu";
 import { MenuIcon } from "@heroicons/react/outline";
+import Logo from '../assets/logo.png'
+import Image from "next/image";
 
 const Navbar = () => {
   const logoRef = useRef();
@@ -37,7 +39,9 @@ const Navbar = () => {
       <nav className="flex flex-row items-center justify-between px-2 xl:mx-40 pt-5">
         <div>
           <h1 ref={logoRef} className="invisible">
-            <Link href="/">Logo</Link>
+            <Link href="/">
+              <Image src={Logo} width={40} height={40} objectFit='cover'/>
+            </Link>
           </h1>
         </div>
         <div className="flex items-center">

@@ -3,7 +3,7 @@ import data from "./data";
 
 export default function WhatWeDo() {
   return (
-    <section className="mx-4 xl:flex xl:justify-center my-10">
+    <section className="mx-4 xl:flex xl:justify-center my-10 xl:my-48">
       <div className="xl:w-sw">
         <div className="flex-col items-center gap-2 mb-6">
           <h2 className="text-3xl font-medium xl:text-5xl">What We Do</h2>

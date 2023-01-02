@@ -8,11 +8,11 @@ export default function FeaturedWorksCard({ work }) {
   const container = useRef();
   useEffect(() => {
     gsap.from(container.current, {
-      y: 200,
-      duration: 1,
+      x: 300,
+      duration: 0.8,
       scrollTrigger: {
         trigger: container.current,
-        top: "top 80%",
+        top: "top 90%",
       },
     });
   });

@@ -188,7 +188,7 @@ const ContactForm = () => {
           </button>
           {isSuccess && (
             <p className="text-2xl mt-2 font-bold">
-              Thanks for reaching out. You will here from us soon
+              Thanks for reaching out. You will hear from us soon
             </p>
           )}
         </div>

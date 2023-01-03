@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import lottie from "lottie-web";
 import { gsap } from "gsap/dist/gsap";
 import HeroImg from "../../assets/hero.png";
 
 const Hero = () => {
   const container = useRef(null);
+  const router = useRouter();
 
   const title = useRef(); /*Targetting H1*/
   const body = useRef(); /*Targetting paragraph*/
@@ -78,6 +80,7 @@ const Hero = () => {
           <p
             ref={but}
             className="text-xl font-medium hover:cursor-pointer  mt-6 xl:text-3xl invisible"
+            onClick={() => router.push("/about")}
           >
             Lets introduce ourselves
           </p>

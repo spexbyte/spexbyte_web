@@ -9,4 +9,4 @@
 5. Add company logo to assets so that when project is merged with main, logo will automatically fill in
 6. Add learn more pages to services page
 7. Handle core values a bit better
-8. Change favicon to something suitable
+8. Change favicon to something suitable - done

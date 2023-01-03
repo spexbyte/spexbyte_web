@@ -1,13 +1,5 @@
-import Cors from "cors";
-
 import sendMailToUser from "../../utils/sendMailToClient";
 import mailer from "../../utils/sendMailToTeam";
-
-// Initializing the cors middleware
-// You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
-const cors = Cors({
-  methods: ["POST", "GET", "HEAD"],
-});
 
 const fs = require("fs");
 const path = require("path");

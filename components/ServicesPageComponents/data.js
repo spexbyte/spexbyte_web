@@ -5,6 +5,7 @@ const data = [
     body: "We leverage the best tools to design and build websites that have great UX, are SEO-friendly and improve sales.",
     buttonText: "Learn More",
     img: "/assets/website.jpeg",
+    page: "/webdev"
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const data = [
     body: "We collaborate with brands to identify their story and tell it through unique visuals and poignant messaging.",
     buttonText: "Learn More",
     img: "/assets/branding.jpg",
+    page: "/branding"
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ const data = [
     body: "We combine design principles to create visuals that capture your user’s needs and make your business stand out from the crowd.",
     buttonText: "Learn More",
     img: "/assets/ui.jpg",
+    page: "/uiandux"
   },
 ];
 

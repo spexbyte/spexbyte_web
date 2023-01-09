@@ -40,7 +40,7 @@ export default function FeaturedWorks() {
   //     .from(featuredCard.current, { y: 300, duration: 10.2 });
   // }, []);
   return (
-    <section className="bg-secondary overflow-hidden py-10 xl:py-52 flex flex-col xl:justify-center xl:items-center">
+    <section className="bg-secondary overflow-hidden py-16 xl:py-52 flex flex-col xl:justify-center xl:items-center">
       <div className="mx-4 xl:w-sw ">
         <h3 ref={title} className="text-accent text-xl xl:text-3xl invisible">
           FEATURED WORKS
@@ -57,7 +57,7 @@ export default function FeaturedWorks() {
         </p>
         <div
           ref={cardContainer}
-          className="pt-5 flex-row space-y-10 xl:space-y-36 xl:grid xl:grid-cols-2 xl:gap-x-52 "
+          className="pt-5 flex-row space-y-10 xl:space-y-36 md:grid md:grid-cols-2 md:gap-x-10 xl:gap-x-52 "
         >
           {data &&
             data.map((work) => (

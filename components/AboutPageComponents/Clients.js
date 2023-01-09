@@ -10,8 +10,8 @@ import {
 
 const Clients = () => {
   return (
-    <div className="bg-secondary w-screen xl:flex xl:flex-col xl:items-center">
-      <div className="xl:w-sw mx-4 my-4">
+    <div className="bg-secondary w-screen py-16 xl:py-52 xl:flex xl:flex-col xl:items-center">
+      <div className="xl:w-sw mx-4 my-4 xl:mb-20">
         <h2 className="text-accent text-xl xl:text-3xl">OUR CLIENTS</h2>
       </div>
 

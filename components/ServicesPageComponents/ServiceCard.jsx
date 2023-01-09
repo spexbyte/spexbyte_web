@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServiceCard({ service }) {
-  const { img, title, body, buttonText } = service;
+  const { img, title, body, buttonText, page } = service;
   return (
     <div className="lg:w-[960px] ">
       <div className="hover:scale-95 transition-all duration-700">
@@ -22,9 +23,11 @@ export default function ServiceCard({ service }) {
         </h2>
         <p className="font-light text-lg xl:text-xl xl:w-3/4">{body}</p>
         <div>
-          <button className=" border-b-2 border-accent text-lg hover:translate-y-2 transition duration-700 font-semibold xl:text-2xl">
-            {buttonText}
-          </button>
+          <Link href={page}>
+            <button className=" border-b-2 border-accent text-lg hover:translate-y-2 transition duration-700 font-semibold xl:text-2xl">
+              {buttonText}
+            </button>
+          </Link>
         </div>
       </div>
     </div>

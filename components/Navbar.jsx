@@ -3,7 +3,7 @@ import Link from "next/link";
 import gsap from "gsap/dist/gsap";
 import Menu from "./Menu";
 import { MenuIcon } from "@heroicons/react/outline";
-import Logo from '../assets/logo.png'
+import Logo from "../assets/logo.png";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -40,7 +40,14 @@ const Navbar = () => {
         <div>
           <h1 ref={logoRef} className="invisible">
             <Link href="/">
-              <Image src={Logo} width={40} height={40} objectFit='cover'/>
+              <Image
+                src={Logo}
+                width={40}
+                height={40}
+                objectFit="cover"
+                alt="Spexbyte Logo"
+                className="cursor-pointer"
+              />
             </Link>
           </h1>
         </div>

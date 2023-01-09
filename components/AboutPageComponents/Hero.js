@@ -1,19 +1,21 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const AboutHero = () => {
+  const router = useRouter();
   return (
     <div>
       <div className="mb-10">
-          <Image
-            src="/assets/team.jpg"
-            layout="responsive"
-            width={1280}
-            height={720}
-            alt="team photo"
-            blurDataURL="/assets/team.jpg"
-            objectFit="cover"
-            placeholder="blur"
-          />
+        <Image
+          src="/assets/team.jpg"
+          layout="responsive"
+          width={1280}
+          height={720}
+          alt="team photo"
+          blurDataURL="/assets/team.jpg"
+          objectFit="cover"
+          placeholder="blur"
+        />
       </div>
       <div className="mx-4 xl:mx-0">
         <h3 className="text-accent text-xl xl:text-2xl">ABOUT US</h3>
@@ -26,7 +28,10 @@ const AboutHero = () => {
           happy to talk through it.
         </p>
         <div className="w-fit mt-4">
-          <h3 className="text-lg font-medium xl:text-xl hover:cursor-pointer">
+          <h3
+            className="text-lg font-medium xl:text-xl hover:cursor-pointer"
+            onClick={() => router.push("/works")}
+          >
             OUR WORKS
           </h3>
           {/* Underline */}

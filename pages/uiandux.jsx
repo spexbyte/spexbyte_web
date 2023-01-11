@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Container from "../components/container";
 import data from "../components/HomepageComponents/FeaturedWorks/data";
@@ -30,7 +31,7 @@ export default function Uiandux() {
             Our design team applies the latest design principles and research to
             every project to create websites that are not only visually
             stunning, but also user-friendly and effective. We take the time to
-            understand our clients needs and goals, and use that knowledge to
+            understand our client's needs and goals, and use that knowledge to
             craft custom websites that truly stand out in a crowded landscape.
             Choose us for design that delivers real results.
           </div>
